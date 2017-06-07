@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/touch_selector"
+                android:paddingLeft="@dimen/margin_16"
+                android:paddingRight="@dimen/margin_16"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_name"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/h3"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/color_red"
+                    android:layout_marginLeft="2dp"
+                    android:textSize="@dimen/h3"
+                    />
+
+                <EditText
+                    android:id="@+id/edtTaskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:hint="@string/task_name_hide"
+                    android:background="@null"
+                    android:textColorHint="@color/color_CCCCCC"
+                    android:gravity="end|center_vertical"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/priorityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/touch_selector"
+                android:paddingLeft="@dimen/margin_16"
+                android:paddingRight="@dimen/margin_16">
+                <TextView
+                    android:id="@+id/taskPriorityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_priority"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/h3"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/arrow_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/taskPriorityContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:layout_marginLeft="2dp"
+                    android:textSize="@dimen/h3"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/imgArrow"
+                    android:text="普通"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/remindLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/touch_selector"
+                android:paddingLeft="@dimen/margin_16"
+                android:paddingRight="@dimen/margin_16">
+                <TextView
+                    android:id="@+id/remindName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_remind"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/h3"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/remindImgArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/arrow_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/remindContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:layout_marginLeft="2dp"
+                    android:textSize="@dimen/h3"
+                    android:layout_toRightOf="@+id/remindName"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="3"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_16">
+
+                <EditText
+                    android:id="@+id/taskDesc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="任务描述"
+                    android:minLines="5"
+                    android:maxLength="5000"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_CCCCCC"
+                    android:textSize="@dimen/h3"
+                    android:textCursorDrawable="@null"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

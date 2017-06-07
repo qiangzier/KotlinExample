@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TaskProject</string>
+    <string name="task_title">任务</string>
+    <string name="add">添加</string>
+    <string name="task_name">任务名称</string>
+    <string name="task_name_hide">请输入任务名称</string>
+    <string name="task_priority">优先级</string>
+    <string name="task_remind">任务提醒</string>
+    <string name="task_remind_add">添加任务提醒</string>
+    <string name="task_remind_person">提醒谁</string>
+    <string name="department_manager">负责人</string>
+    <string name="task_remind_creator">创建人</string>
+    <string name="task_remind_scope">抄送人</string>
+
+
+    <array name="task_priority_array">
+        <item>普通</item>
+        <item>紧急</item>
+        <item>非常紧急</item>
+    </array>
+</resources>

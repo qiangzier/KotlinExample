@@ -1,0 +1,22 @@
+说明:
+
+这个包下是kotlin之extensions(扩展)相关的知识;
+
+- Extension Functions:我们可以给任何一个类(包括系统的类)追加扩展方法
+
+例如:给MutableList扩展(追加)一个swap方法用于交换两个index的value
+
+fun MutableList.swap(index1: Int,index2: Int){
+    val tmp = this[index1] //这里的this指代的是调用该方法的list对象
+    this[index1] = this[index2]
+    this[index2] = tmp
+}
+
+调用的地方使用如下:
+
+val list = mutableListOf(1,2,3)
+list.swap(0,2)
+
+输出结果为:
+
+3,2,1
