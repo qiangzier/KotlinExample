@@ -98,4 +98,6 @@ class TaskRemindActivity : BaseActivity() {
                 .mapNotNull { generatorRemindItemView(it) }
                 .forEach { task_remind_container.addView(it) }
     }
+
+
 }
