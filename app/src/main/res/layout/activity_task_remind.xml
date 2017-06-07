@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_remind"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/app_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/create_remind"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:gravity="center"
+                android:background="@color/color_white"
+                android:layout_marginTop="@dimen/margin_10">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_project_add_board_icon" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/task_remind_add"
+                    android:textColor="@color/color_1ab394"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/task_remind_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_remind_person"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/h5"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginBottom="7dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/color_white">
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:background="@drawable/touch_selector">
+
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_16"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:longClickable="false"
+                        android:checked="true"
+                        android:button="@drawable/project_muti_check_selector"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/checkbox1"
+                        android:ellipsize="end"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp"
+                        android:text="@string/department_manager"
+                        android:maxLines="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_F5F5F5"
+                        android:layout_toRightOf="@+id/checkbox1"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:background="@drawable/touch_selector">
+
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_16"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:longClickable="false"
+                        android:button="@drawable/project_muti_check_selector"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/checkbox2"
+                        android:ellipsize="end"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp"
+                        android:text="@string/task_remind_creator"
+                        android:maxLines="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_F5F5F5"
+                        android:layout_toRightOf="@+id/checkbox2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:background="@drawable/touch_selector">
+
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_16"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:longClickable="false"
+                        android:button="@drawable/project_muti_check_selector"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/checkbox3"
+                        android:ellipsize="end"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp"
+                        android:text="@string/task_remind_scope"
+                        android:maxLines="1" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
