@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
 import com.hzq.taskproject.coroutines.coroutine
-import com.hzq.taskproject.coroutines.firstCoroutine
+import com.hzq.taskproject.coroutines.coroutines19
 import com.hzq.taskproject.data.queryAllTask
 import com.hzq.taskproject.model.TaskModel
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,7 +27,7 @@ class MainActivity : BaseActivity() {
         recyclerView.adapter = adapter
 
         //测试协程
-        firstCoroutine()
+        coroutines19()
     }
 
     override fun onStart() {
